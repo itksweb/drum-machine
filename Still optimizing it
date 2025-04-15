@@ -12,7 +12,9 @@ const App = () => {
 
   const powerButtonClick = () => {
     setPower(!power);
-    setDisplay(power? 'POWER ON': 'POWER OFF' ) 
+    if  (power === true) setDisplay('POWER ON')
+    else setDisplay('POWER OFF')
+    //setDisplay(power? 'POWER ON': 'POWER OFF' ) 
   };
   const drumPadClick = (e) => {
     if (power === true) {
