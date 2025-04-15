@@ -11,8 +11,6 @@ const App = () => {
   const [power, setPower] = useState(true);
 
   const powerButtonClick = () => {
-    //if  (power === true) setDisplay('POWER ON')
-    //else setDisplay('POWER OFF')
     setDisplay(power? 'POWER OFF': 'POWER ON' ) 
     setPower(!power);
   };
@@ -20,7 +18,6 @@ const App = () => {
     if (power === true) {
       setDisplay(e.target.id);
       e.target.firstElementChild.play();
-      console.log(e.target.id);
     }
   };
   const soundBankClick = () => {
