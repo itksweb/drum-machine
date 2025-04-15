@@ -62,7 +62,7 @@ const App = () => {
       <Controls
         display={display}
         volume={volume}
-        handleVolume={handleVolume}
+        setVolume={setVolume}
         soundBankClick={soundBankClick}
         powerButtonClick={powerButtonClick}
         power={power}
