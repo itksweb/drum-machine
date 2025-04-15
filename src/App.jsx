@@ -57,8 +57,7 @@ const App = () => {
               key={p.keyCode}
               id={p.id}
               trigKey={p.trigKey}
-              url={p.url}
-              keyCode={p.keyCode}
+              url={p.url} 
               drumPadClick={drumPadClick}
             />
           );
