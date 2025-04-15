@@ -52,15 +52,6 @@ const Controls = ({
         value={volume}
         id='cont'
         />
-        // <input
-        //   max="1"
-        //   min="0"
-        //   step="0.1"
-        //   type="range"
-        //   id="cont"
-        //   onChange={handleVolume}
-        //   value={volume}
-        // />
       </div>
       <div id="pads-switch" className="control grid-item">
         <p>Bank</p>
