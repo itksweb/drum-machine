@@ -17,13 +17,13 @@ const Controls = ({
     scls = soundBank === sb[1] ? "goright" : "goleft";
   }
   
-  const secondaryBgColor = 'purple'
-  const min ='0';
-  const max ='100';
-  const percentage = 100 * (value - min) / (max - min)
-  const rangerStyle = {
-     background: `linear-gradient(90deg, var( - primary-600) 0, var( - orange-500) ${percentage}%, ${secondaryBgColor ? secondaryBgColor : 'var( - defaut-color)'} ${percentage + 0.1}%)`
-   }
+  // const secondaryBgColor = 'purple'
+  // const min ='0';
+  // const max ='100';
+  // const percentage = 100 * (value - min) / (max - min)
+  // const rangerStyle = {
+  //   background: `linear-gradient(90deg, var( - primary-600) 0, var( - orange-500) ${percentage}%, ${secondaryBgColor ? secondaryBgColor : 'var( - defaut-color)'} ${percentage + 0.1}%)`
+  // }
   // if (power && soundBank === sb[0]) {
   //   scls = "goleft";
   // } else if (power && soundBank === sb[1]) {
@@ -43,11 +43,9 @@ const Controls = ({
       </div>
       <div id="volume" className="grid-item">
         <input 
-        className='' 
-        style={rangerStyle} 
         type='range' 
-        min={min} 
-        max={max} 
+        min='0'
+        max='100' 
         onChange={(e) => setVolume(+e.target.value)}
         value={volume}
         id='cont'
