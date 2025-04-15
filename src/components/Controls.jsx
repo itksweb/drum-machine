@@ -3,7 +3,7 @@ import sb from "../soundbank";
 const Controls = ({
   display,
   volume,
-  handleVolume,
+  setVolume,
   soundBankClick,
   powerButtonClick,
   power,
@@ -16,6 +16,14 @@ const Controls = ({
   } else {
     scls = soundBank === sb[1] ? "goright" : "goleft";
   }
+  
+  const secondaryBgColor = 'purple'
+  const min ='0';
+  const max ='100';
+  const percentage = 100 * (value - min) / (max - min)
+  const rangerStyle = {
+     background: `linear-gradient(90deg, var( - primary-600) 0, var( - orange-500) ${percentage}%, ${secondaryBgColor ? secondaryBgColor : 'var( - defaut-color)'} ${percentage + 0.1}%)`
+   }
   // if (power && soundBank === sb[0]) {
   //   scls = "goleft";
   // } else if (power && soundBank === sb[1]) {
@@ -34,15 +42,25 @@ const Controls = ({
         </div>
       </div>
       <div id="volume" className="grid-item">
-        <input
-          max="1"
-          min="0"
-          step="0.1"
-          type="range"
-          id="cont"
-          onChange={handleVolume}
-          value={volume}
+        <input 
+        className='' 
+        style={rangerStyle} 
+        type='range' 
+        min={min} 
+        max={max} 
+        onChange={(e) => setVolume(+e.target.value)}
+        value={volume}
+        id='cont'
         />
+        // <input
+        //   max="1"
+        //   min="0"
+        //   step="0.1"
+        //   type="range"
+        //   id="cont"
+        //   onChange={handleVolume}
+        //   value={volume}
+        // />
       </div>
       <div id="pads-switch" className="control grid-item">
         <p>Bank</p>
