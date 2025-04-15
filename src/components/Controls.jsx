@@ -44,8 +44,9 @@ const Controls = ({
       <div id="volume" className="grid-item">
         <input 
         type='range' 
-        min='0'
-        max='100' 
+        min='0.0'
+        max='1.0' 
+        step='0.05'
         onChange={(e) => setVolume(+e.target.value)}
         value={volume}
         id='cont'
