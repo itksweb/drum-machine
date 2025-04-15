@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const App = () => {
   const [display, setDisplay] = useState("WELCOME");
-  const [volume, setVolume] = useState(0.5);
+  const [volume, setVolume] = useState(50);
   const [sbToggle, setSbToggle] = useState(true);
   const [soundBank, setSoundBank] = useState(sb[0]);
   const [power, setPower] = useState(true);
