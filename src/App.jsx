@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const App = () => {
   const [display, setDisplay] = useState("WELCOME");
-  const [volume, setVolume] = useState(50);
+  const [volume, setVolume] = useState(0.5);
   const [sbToggle, setSbToggle] = useState(true);
   const [soundBank, setSoundBank] = useState(sb[0]);
   const [power, setPower] = useState(true);
@@ -16,7 +16,7 @@ const App = () => {
   };
   const drumPadClick = (e) => {
     if (power === true) {
-      e.target.firstElementChild.volume= volume/100
+      e.target.firstElementChild.volume= volume
       setDisplay(e.target.id);
       e.target.firstElementChild.play();
     }
