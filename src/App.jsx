@@ -16,6 +16,7 @@ const App = () => {
   };
   const drumPadClick = (e) => {
     if (power === true) {
+      e.target.firstElementChild.volume= volume/100
       setDisplay(e.target.id);
       e.target.firstElementChild.play();
     }
